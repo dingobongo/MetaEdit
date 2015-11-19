@@ -1,0 +1,36 @@
+[About]
+
+MetaGenerator is designed to help you quickly generate usefull metadata & insert it quickly into .wav files.
+
+[Use]
+1. Before you start using MetaGenerator you needs some wav files. These should have appropriate names as the name will be used to generate some of your metadata.
+
+Ie
+Thing Action(s) Mic Channels Take.wav
+or
+Bike Skidd Concrete Various DPA 4060 LR 01
+
+2. Open Meta Generator and use the "Open Folder" button to open a dialogue and navigate to the folder where your files are. 
+The tool supports subfolders so you can break up your files that way if you want.
+
+3. You can now add more metadata, some may be filled out for you allready by eather the defaults.ini or generated ie time/date.
+The description fields Project, Session and Recordists will be added to the generated description. The description will be made up from your provided fileneme.
+
+
+4. When you're done click the "write csv" button, this will generate and open a .csv file that the tool can later understand.
+You can do further editing of the metadata here but don't change the Column title s or the file path otherewise the next step will not work.
+
+Once your're done with editing the metadata save the .csv and close it.
+
+5.Now you can actually write the data into the .wav files. To do this just click the "write wavs" button. This may take a while but the tool will let you know when its complete.
+Your files now should have all the metadata you input written into them.
+
+[Defaults]
+There is a defaoults file called MetaDefaults.ini, edit this with noepad++ or similar.
+
+There you can add default values that are automaticaly added to the named fields on the opening of the tool. 
+This may be handy if you're working on one project or are the only recordist of your files or use one folder for sound editing.
+
+
+Wirtten by Andrew Quinn 2015
+Bext writing by BWFMetaEdit CLI - FADGI
