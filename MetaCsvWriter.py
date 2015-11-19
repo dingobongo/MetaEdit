@@ -28,7 +28,7 @@ def write_csv(header1,header2,header3,header4,header5,header6,header7,header8,fo
         #getlist of files and for each add the path
         for path, subdirs, files in os.walk(os.path.abspath(folder)):
             for name in files:
-                if name.endswith((".wav",".WAV")):
+                if (name.lower()).endswith(".wav"):
                     fullpath.append(os.path.join(path,name)) #adds path to filename and appends to fulpath list
                     name = os.path.splitext(name)[0] #splits extension and filename, returns only filename
                     if session.get() != "":
@@ -67,11 +67,8 @@ def write_csv(header1,header2,header3,header4,header5,header6,header7,header8,fo
 
         csvpath = (os.path.join(folder,"metadata.csv"))
 
-        if sys.platform.startswith(('darwin')):
-            subprocess.call(('open', csvpath))
-        elif os.name == 'nt':
-            os.startfile(csvpath)
-
+        subprocess.call(('open', csvpath))
+        
 
 
     except IOError:
