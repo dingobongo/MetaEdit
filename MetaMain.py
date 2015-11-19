@@ -4,7 +4,6 @@ import sys
 import time
 import ConfigParser
 
-
 import Tkinter as tk
 from Tkinter import *
 
@@ -13,7 +12,7 @@ from MetaGetFolder import *
 from MetaWavsWriter import *
 from MetaHelp import *
 
-config = configparser.ConfigParser()
+config = ConfigParser.ConfigParser()
 
 configpath = "MetaDefaults.ini"
 
@@ -53,13 +52,6 @@ header5 = "OriginationDate"
 header6 = "TimeReference"
 header7 = "OriginationTime"
 header8 = "CodingHistory"
-
-class TestApp(App):
-    def Build(self):
-        return Button(text="Hello World")
-    
-TestApp().run()
-
 
 #exit
 def master_quit():
@@ -156,4 +148,5 @@ Button(master, text="Write Wavs",command=lambda: write_wavs(folder.current)).gri
 
 
 master.mainloop()
+
 
